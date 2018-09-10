@@ -4,6 +4,8 @@ from secrets import *
 from time import sleep
 
 botname="@csfresheradvice"
+seconds=3600 # seconds to wait between tweeting
+filename="advice.tsv" # file with tweets in
 
 
 # advice bot, derived heavily from this 
@@ -44,8 +46,8 @@ class advicebot:
 
 
 def main():
-	bot = advicebot("advice.tsv")
-	bot.automate(3600)
+	bot = advicebot(filename)
+	bot.automate(seconds)
 
 if __name__ == "__main__":
     main()
